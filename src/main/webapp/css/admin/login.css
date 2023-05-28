@@ -1,0 +1,12 @@
+@import "../global.css";
+
+.login-admin {
+    min-height: 100vh;
+}
+
+.login-box {
+    width: 500px;
+    border: 1px solid lime;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,24 @@
+@import '../global.css';
+@import 'cart.css';
+
+.ct-label {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.ct-table-body tr td:last-child,
+.ct-table-footer tr th:last-child {
+    text-align: end;
+}
+
+.ct-table-footer tr th:last-child {
+    color: #ff0000;
+}
+
+.ct-table-body tr td{
+    border: 0;
+}
+
+.ct-table-footer tr th {
+    border: 0;
+    border-top: 1px solid #dee2e6;
+}

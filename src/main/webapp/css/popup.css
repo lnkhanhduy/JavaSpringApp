@@ -1,0 +1,103 @@
+@import 'global.css';
+
+#pp-toast {
+    position: fixed;
+    top: 80px;
+    right: 32px;
+    z-index: 100;
+}
+
+.pp-toast {
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid var(--i);
+    min-width: 400px;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+    transform: translateX(calc(100% + 35px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    margin-bottom: 16px;
+}
+
+.pp-toast.pp-active {
+    transform: translateX(0);
+}
+
+.pp-toast .pp-toast-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pp-toast-content i.pp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+    color: #fff;
+    background-color: var(--i);
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.pp-toast-content .pp-message {
+    display: flex;
+    flex-direction: column;
+}
+
+.pp-message .pp-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.pp-message .pp-text.pp-title {
+    font-weight: 600;
+}
+
+.pp-toast i.pp-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.pp-toast i.pp-close:hover {
+    opacity: 1;
+}
+
+.pp-toast .pp-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.pp-toast .pp-progress::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--i);
+}
+
+.pp-progress.progress-active::before {
+    animation: timeout 5s linear forwards;
+}
+
+@keyframes timeout {
+    100% {
+        right: 100%;
+    }
+}
+

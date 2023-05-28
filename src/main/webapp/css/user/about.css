@@ -1,0 +1,228 @@
+@import "../global.css";
+
+.ct-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.ct-card {
+  width: 100%;
+}
+
+.ct-card-bio {
+  min-height: 170px;
+  background-color: #45a564;
+  padding: 6px 6px 12px 6px;
+  display: flex;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  z-index: 100;
+}
+
+.ct-img-wrapper {
+  width: 50%;
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ct-img-wrapper img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.ct-person-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  color: #fff;
+  text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+.ct-person-info h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.ct-person-info p {
+  font-size: 16px;
+}
+
+.ct-card-btn {
+  position: absolute;
+  bottom: -30px;
+  right: 25%;
+  width: 50%;
+  height: 60px;
+  background-color: #2b303a;
+  color: #fff;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.ct-change .ct-card-btn {
+  width: 60px;
+  right: 5%;
+  border-radius: 50%;
+}
+
+.ct-card-btn-contact {
+  transition: all 0.5s 0.1s;
+}
+
+.ct-card-btn-contact,
+.ct-card-btn i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ct-change .ct-card-btn-contact {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s;
+}
+
+.ct-card-btn i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ct-change .ct-card-btn i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.ct-card-contact {
+  background-color: #2d814d;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+
+.ct-change .ct-card-contact {
+  transform: translateY(0);
+}
+
+.ct-card-contact h4 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
+.ct-change .ct-card-contact h4 {
+  transform: scale(1);
+}
+
+.ct-card-social {
+  background-color: #fff;
+  padding: 0 20px;
+  margin: 16px 0;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ct-email {
+  transition: all 0.5s 0.3s;
+}
+
+.ct-fb {
+  transition: all 0.5s 0.5s;
+}
+
+.ct-linkedin {
+  transition: all 0.5s 0.7s;
+}
+
+.ct-change .ct-card-social {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.ct-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.ct-email .ct-icon-wrapper {
+  background-color: #dd4b39;
+}
+
+.ct-fb .ct-icon-wrapper {
+  background-color: #3b5998;
+}
+
+.ct-linkedin .ct-icon-wrapper {
+  background-color: #007bb6;
+}
+
+.ct-icon-wrapper i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.ct-contact-details h4 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.ct-email h4 {
+  color: #dd4b39;
+}
+
+.ct-fb h4 {
+  color: #3b5998;
+}
+
+.ct-linkedin h4 {
+  color: #007bb6;
+}
+
+.ct-contact-details p {
+  font-size: 16px;
+  color: #444;
+  letter-spacing: 1px;
+}
+
+.ct-card-social span {
+  margin-left: auto;
+  font-size: 28px;
+  font-weight: bold;
+  color: #999;
+}

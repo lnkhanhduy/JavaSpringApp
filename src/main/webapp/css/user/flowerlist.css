@@ -1,0 +1,68 @@
+@import "../global.css";
+
+.filter-title {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.ct-outline-button {
+    background-color: transparent;
+    padding: 8px 32px;
+    border: 1px solid var(--ct-color);
+    border-radius: 4px;
+    transition: 0.5s ease;
+    color: var(--ct-color);
+    cursor: pointer;
+}
+
+.ct-outline-button:hover {
+    background-color: var(--ct-color);
+    transform: translate(-5px, -5px);
+    color: white;
+}
+
+.ct-input-group-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 8px;
+}
+
+.ct-card-flip {
+    perspective: 1000px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.ct-flip-box {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.ct-card-flip:hover .ct-flip-box {
+    transform: rotateY(180deg);
+}
+
+.ct-flip-box .ct-card-front,
+.ct-flip-box .ct-card-back {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.ct-flip-box .ct-card-front {
+    background-color: white;
+}
+
+.ct-flip-box .ct-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+}

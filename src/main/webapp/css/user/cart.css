@@ -1,0 +1,75 @@
+.cart-progress {
+    display: flex;
+    align-items: center;
+    margin: 0 15%;
+}
+
+.cart-progress [class^="cart-step"] {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-progress .cart-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.line-active {
+    background: #00f !important;
+}
+
+.step-active {
+    border-color: #00f !important;
+    color: #00f;
+}
+
+.cart-step-title {
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-step-title p {
+    position: relative;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.cart-step-title p::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ct-btn-cart {
+    background: transparent;
+    padding: 8px 24px;
+    color: var(--ct-color);
+    border: 1px solid var(--ct-color);
+    transition: all 0.5s ease;
+    border-radius: 6px;
+}
+
+.ct-btn-cart:hover {
+    color: #fff;
+    background-color: var(--ct-color);
+    transform: translate(-4px, -4px);
+}

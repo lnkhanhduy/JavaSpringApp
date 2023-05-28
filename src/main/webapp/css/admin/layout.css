@@ -1,0 +1,245 @@
+@import "../global.css";
+
+.ct-container {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.ct-navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: blue;
+    border-left: 10px solid blue;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.ct-navigation.active-toggle {
+    width: 60px;
+}
+
+.ct-navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.ct-navigation ul li {
+    position: relative;
+    width: 100%;
+    transition: 0.75s;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.ct-navigation ul li:hover,
+.ct-navigation ul li.active {
+    background-color: #fff;
+}
+
+.ct-navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.ct-navigation ul li:not(:first-child,:last-child) {
+    margin-bottom: 8px;
+}
+
+.ct-navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: #fff;
+}
+
+.ct-navigation ul li:hover a,
+.ct-navigation ul li.active a {
+    color: blue;
+}
+
+.ct-navigation ul li .ct-icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    min-height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    padding-left: 16px;
+}
+
+.ct-navigation ul li .ct-title {
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.ct-navigation ul li .ct-page-title {
+    transform: translateX(50%);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+
+.ct-content {
+    position: absolute;
+    left: 300px;
+    top: 0;
+    width: calc(100% - 300px);
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.ct-content.active-toggle {
+    left: 60px;
+    width: calc(100% - 60px);
+}
+
+.ct-content .ct-topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px 0 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ct-topbar .ct-toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.ct-tab-content {
+    width: 100%;
+}
+
+
+.ct-dashboard .ct-card-box {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;    
+}
+
+.ct-card-box .ct-card {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.ct-card-box .ct-card:hover {
+    background-color: blue;
+}
+
+.ct-card .ct-number {
+    font-weight: 500;
+    font-size: 32px;
+    color: blue;
+}
+
+.ct-card .ct-card-name {
+    color: #333;
+    margin-top: 8px;
+}
+
+.ct-card .ct-icon-card{
+    font-size: 48px;
+    align-self: center;
+    color: var(--i);
+}
+
+.ct-card:hover .ct-number,
+.ct-card:hover .ct-card-name,
+.ct-card:hover .ct-icon-card {
+    color: #fff;
+}
+
+/* user-management */
+.ct-user-management {
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+    max-height: 80vh;
+}
+
+.ct-user-management .ct-bar {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 16px;
+}
+
+.ct-bar .ct-btn-add {
+    color: white;
+    background-color: #00dd00;
+    padding: 12px 24px;
+    border: 1px solid #00dd00;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.ct-bar .ct-btn-add:hover {
+    background: transparent;
+    color: #00dd00;
+}
+
+.ct-user-management .ct-user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ct-user-table thead td {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #333;
+    padding: 8px 0;
+}
+
+.ct-user-table tbody td {
+    padding: 8px 4px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.ct-user-table tbody .btn {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 4px 10px;
+    color: black;
+    transition: 0.5s;
+    opacity: 0.6;
+}
+
+.ct-user-table tbody .ct-btn:hover {
+    opacity: 1;
+}
+
+.ct-user-table tbody .ct-btn-reset {
+    color: blue;
+}
+
+.ct-user-table tbody .ct-btn-delete {
+    color: red;
+}

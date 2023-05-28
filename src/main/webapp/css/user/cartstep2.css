@@ -1,0 +1,25 @@
+@import '../global.css';
+@import 'cart.css';
+
+.ct-table-body tr td {
+    text-align: center;
+    border: 0;
+}
+
+.ct-table-body tr td:first-child{
+    text-align: start;
+}
+
+.ct-table-body tr td:last-child {
+    text-align: end;
+}
+
+.ct-table-footer tr th {
+    border: 0;
+    border-top: 1px solid #dee2e6;
+    color: #ff0000;
+}
+
+.ct-table-footer tr th:last-child {
+    text-align: end;
+}

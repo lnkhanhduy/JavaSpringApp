@@ -1,0 +1,39 @@
+@import '../global.css';
+@import 'cart.css';
+
+input[type="number"] {
+    text-align: center;
+}
+
+.ct-img {
+    max-width: 200px;
+}
+
+.ct-icon {
+    cursor: pointer;
+    transition: 0.3s ease;
+    padding: 8px;
+}
+
+.ct-icon:hover {
+    transform: scale(1.1);
+}
+
+.ct-table-body td {
+    border: 0 !important;
+}
+
+.ct-table-body tr td:last-child {
+    text-align: end;
+}
+
+.ct-table-footer td {
+    border: 0;
+    border-top: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+.ct-table-footer tr td:last-child {
+    text-align: end;
+    color: #f00;
+}

@@ -1,0 +1,17 @@
+.ct-navbar {
+    min-height: 80px;
+    font-size: 18px;
+    background-color: rgba(230, 230, 250, 0.8);
+}
+
+.ct-subnavbar {
+    font-size: 18px;
+    min-width: 250px;
+}
+
+@media screen and (min-width: 1200px) {
+    .ct-subnavbar-right {
+        right: 0;
+        left: unset !important; 
+    }
+}
